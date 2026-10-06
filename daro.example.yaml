@@ -1,0 +1,5 @@
+# Copy to daro.yaml in your Flutter app root. Omit platforms you do not build.
+ios:
+  integration_key: "REPLACE_WITH_IOS_INTEGRATION_KEY"
+android:
+  integration_key: "REPLACE_WITH_ANDROID_INTEGRATION_KEY"
