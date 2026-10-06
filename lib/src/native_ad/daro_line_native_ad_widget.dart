@@ -83,7 +83,8 @@ class DaroLineNativeAdWidget extends StatelessWidget {
           );
         },
         onCreatePlatformView: (params) {
-          final controller = PlatformViewsService.initExpensiveAndroidView(
+          // [signal 패치] 2.0.0 원본은 initExpensiveAndroidView(Hybrid Composition). Android 전체 프레임 저하 및 BackdropFilter 미적용 문제로 1.0.6과 같은 방식으로 되돌림
+          final controller = PlatformViewsService.initSurfaceAndroidView(
             id: params.id,
             viewType: _viewType,
             layoutDirection: TextDirection.ltr,
